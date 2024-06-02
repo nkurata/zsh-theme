@@ -5,10 +5,10 @@
 ## Features
 
 - **System Icons:** Displays an icon based on your operating system:
-  - Linux: 🐧
   - macOS: 
+  - Linux: 🐧
   - Windows (Cygwin/MSYS): ⊞
-  - Others: ❯
+  - Unrecognised: ❯
 - **Git Integration:** Indicates the status of your Git repository with different symbols for:
   - Modified files
   - Untracked files
@@ -58,10 +58,16 @@ This indicates:
 - You are on a Linux system
 
 ## Examples
-<img width="520" alt="Screenshot 2024-06-02 at 15 59 05" src="https://github.com/nkurata/zsh-theme/assets/90001579/b9376de8-1a6d-442a-9307-08852e65e278">
-<img width="581" alt="Screenshot 2024-06-02 at 15 58 25" src="https://github.com/nkurata/zsh-theme/assets/90001579/42e6d75b-48eb-41a5-9ee9-07619487f23b">
-<img width="521" alt="Screenshot 2024-06-02 at 15 59 50" src="https://github.com/nkurata/zsh-theme/assets/90001579/7c41d107-3e94-44fe-9366-09ecf7a59cba">
-<img width="574" alt="Screenshot 2024-06-02 at 16 00 28" src="https://github.com/nkurata/zsh-theme/assets/90001579/5510b667-192d-4ba8-a393-9d31a3a7f4e8">
+- Apple System
+<img width="500" alt="apple-zshtheme" src="https://github.com/nkurata/zsh-theme/assets/90001579/bc312d40-9e76-422b-9ac5-db50a9475cc6">
+- Linux System
+<img width="500" alt="linux-zshtheme" src="https://github.com/nkurata/zsh-theme/assets/90001579/23d5be54-c134-45c3-871d-4c1454462c70">
+- Windows System
+<img width="500" alt="windows-zshtheme" src="https://github.com/nkurata/zsh-theme/assets/90001579/e5edb17c-0577-4fd9-bede-8d441e554e3c">
+- Unrecognised System
+<img width="500" alt="other-zshtheme" src="https://github.com/nkurata/zsh-theme/assets/90001579/3734bf07-05ce-41d0-8960-af491df03750">
+
+
 
 
 ## License
