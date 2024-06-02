@@ -59,11 +59,17 @@ This indicates:
 
 ## Examples
 - Apple System
+
 <img width="500" alt="apple-zshtheme" src="https://github.com/nkurata/zsh-theme/assets/90001579/bc312d40-9e76-422b-9ac5-db50a9475cc6">
+
 - Linux System
+
 <img width="500" alt="linux-zshtheme" src="https://github.com/nkurata/zsh-theme/assets/90001579/23d5be54-c134-45c3-871d-4c1454462c70">
+
 - Windows System
+
 <img width="500" alt="windows-zshtheme" src="https://github.com/nkurata/zsh-theme/assets/90001579/e5edb17c-0577-4fd9-bede-8d441e554e3c">
+
 - Unrecognised System
 <img width="500" alt="other-zshtheme" src="https://github.com/nkurata/zsh-theme/assets/90001579/3734bf07-05ce-41d0-8960-af491df03750">
 
