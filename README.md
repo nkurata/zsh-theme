@@ -2,6 +2,8 @@
 
 **Minimal-OS** is a sleek and simple Zsh theme designed for use with Oh-My-Zsh. It provides a minimalist prompt with helpful Git status indicators and system-specific icons.
 
+Please Consider Favoriting this repo if you enjoy the theme!
+
 ## Features
 
 - **System Icons:** Displays an icon based on your operating system:
