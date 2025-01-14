@@ -2,6 +2,12 @@
 
 autoload -Uz vcs_info
 
+# Configure vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' formats '%b'
+zstyle ':vcs_info:git:*' actionformats '%b'
+zstyle ':vcs_info:git:*' branchformat '%{$fg[magenta]%}%b%{$reset_color%}'
+
 function icon {
     local color="%{$fg[magenta]%}"
     if [[ $? -ne 0 ]]; then
@@ -25,26 +31,20 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[magenta]%} ✓"
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="%{$fg[green]%} ↓"
 
-function detect_background {
-    if [[ $(tput colors) -ge 256 ]]; then
-        local bg_color=$(tput setab 0; tput setaf 7; echo -n " "; tput sgr0)
-        if [[ "$bg_color" == " " ]]; then
-            echo "dark"
-        else
-            echo "light"
+function git_prompt_info() {
+    if command -v vcs_info &> /dev/null; then
+        vcs_info
+        if [[ -n "${vcs_info_msg_0_}" ]]; then
+            local git_state=""
+            if [[ -n "$(git status --porcelain)" ]]; then
+                git_state="${ZSH_THEME_GIT_PROMPT_DIRTY}"
+            else
+                git_state="${ZSH_THEME_GIT_PROMPT_CLEAN}"
+            fi
+            echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${vcs_info_msg_0_}${git_state}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
         fi
-    else
-        echo "dark"
     fi
 }
 
-if [[ $(detect_background) == "light" ]]; then
-    local prompt_color="%{$fg[blue]%}"
-    export LS_COLORS="di=94:fi=0:ln=36:pi=33:so=35:bd=34;46:cd=34;43:or=31;1:mi=31;1:ex=32"
-else
-    local prompt_color="%{$fg_bold[blue]%}"
-    export LS_COLORS="di=34:fi=0:ln=36:pi=33:so=35:bd=34;46:cd=34;43:or=31;1:mi=31;1:ex=32"
-fi
-
-PROMPT="${prompt_color}%~%{$reset_color%} $(git_prompt_info)${prompt_color}%*%{$reset_color%}
- $(icon) "
+PROMPT='%{$fg_bold[blue]%}%~%{$reset_color%} $(git_prompt_info)%{$fg_bold[blue]%}%*%{$reset_color%}
+ $(icon) '
